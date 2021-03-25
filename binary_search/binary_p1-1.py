@@ -24,6 +24,7 @@ def check(array, start, end, target): # target에는 구매하려는 제품 종�
 # 입력 받기
 n = int(input()) # 가게에 있는 부품 개수
 stock_list = list(map(int, input().split()))
+stock_list.sort() # 이진 탐색을 하기 위해서 정렬해주어야 함.
 m = int(input()) # 손님이 구매하려는 부품 개수
 buy_list = list(map(int, input().split()))
 # 구매하려는 부품 재고 확인하기
