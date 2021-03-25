@@ -17,7 +17,11 @@ n, target = map(int, input().split()) # n은 원소 개수이자, end 값을 알
 array = list(map(int, input().split()))
 # 이진 탐색 수행 결과 출력
 result = binary_search(0, n-1, target, array)
-print(result + 1)
+# 해당 원소가 존재하지 않는 경우도 고려해서 출력
+if result == None:
+    print("원소가 존재하지 않습니다.")
+else:
+    print(result+1) # 몇 번째 인덱스인지를 나타내기 위해서 +1 하는 것
 
 '''
 10 7
@@ -44,4 +48,9 @@ if result == None:
     print("원소가 존재하지 않습니다.")
 else:
     print(result+1) # 몇 번째 인덱스인지를 나타내기 위해서 +1 하는 것
+'''
+
+'''
+재귀함수가 아니라 반복문으로 구현한다면
+while(start <= end): 반복문 추가 
 '''
