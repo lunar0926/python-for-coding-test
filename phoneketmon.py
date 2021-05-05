@@ -8,7 +8,10 @@ def solution(nums):
             answer_list.append(i)
             
     # 선택할 수 있는 폰켓몬 종류 개수의 최댓값은 N / 2
+    '''
     if len(answer_list) >= len(nums) / 2:
         return len(nums) / 2
     else:
         return len(answer_list)
+    '''
+    return min(len(nums) / 2, len(answer_list)) # len()을 활용해서 더 간략하게 수정
